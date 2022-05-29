@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
 
 .container {
   width: 1200px;
@@ -9,7 +9,7 @@
 /* <!--========================================================
                               HEADER
     =========================================================--> */
-/* 헤더 영역 */
+/* 헤더 영역 = 로고 + 네비게이션 */
 header {
   width: 100%;
   height: 100px;
@@ -27,13 +27,13 @@ header {
   /* line-height: 100px; flex 안쓰고 할려면 이런식으로 height값과 일치하게 만들어서 가운데로 오게 만든다 */
 }
 
-#logo a{
+#logo a {
   color: white;
   text-decoration: none;
 }
 
 #logo h1 {
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: 40px;
   font-weight: 700;
   text-shadow: 0 -1px 0 #222;
@@ -49,21 +49,24 @@ nav {
 
 ul {
   list-style-type: none;
-  height: 60px;
 }
 
-ul > li {
+#topMenu > li {
   float: left;
   position: relative;
+  width: 25%;
 }
 
-
-ul li a {
+#topMenu > li > a {
   color: #fff;
   display: block;
   text-decoration: none;
   font-weight: 600;
   padding: 18px 60px;
+}
+
+#topMenu > li > a:hover{
+  color: rgb(241, 138, 138);
 }
 
 .dropdown:hover .dropdown-content {
@@ -74,9 +77,9 @@ ul li a {
   display: none;
   background-color: rgba(255, 255, 255, 0.6);
   width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  position: absolute; 
+  position: absolute;
   left: 15px;
 }
 
@@ -94,13 +97,9 @@ ul li a {
   color: red;
 }
 
-ul li {
+#topMenu > li:hover > ul {
   display: block;
   z-index: 10;
-}
-
-li > a:hover {
-  color: #000;
 }
 
 .dropdown > a > span {
@@ -111,7 +110,7 @@ li > a:hover {
     =========================================================--> */
 /* 슬라이드쇼 영역*/
 #slideShow {
-  width:100%;
+  width: 100%;
   height: 300px;
   overflow: hidden; /* 영역 넘치면 감춤 */
   clear: both; /* 플로팅 해제 */
@@ -148,7 +147,7 @@ li > a:hover {
   right: 0;
 }
 
-button:hover{
+button:hover {
   background-color: #222;
   color: #fff;
   opacity: 0.6;
@@ -159,27 +158,119 @@ button:focus {
   outline: 0;
 }
 
-/* 메인컨텐츠 영역*/
+/* 메인컨텐츠 영역 = 탭메뉴 + 퀵링크 */
 #contents {
   width: 100%;
   height: 300px;
+  margin-top: 20px;
 }
 
 /* 탭메뉴 영역*/
 #tabMenu {
   width: 600px;
   height: 100%;
-  background-color: violet;
   float: left;
+  margin-top: 10px;
+}
+
+#tabMenu input[type="radio"] {
+  display: none;
+}
+
+#tabMenu label {
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid transparent;
+}
+
+#tabMenu label:hover {
+  color: #222;
+  cursor: pointer;
+}
+
+#tabMenu input:checked + label {
+  color: #b00;
+  border: 1px solid #ddd;
+  background-color: #eee;
+}
+
+.tabContent {
+  display: none;
+  padding: 20px 0 0;  
+  border-top: 1px solid #ddd;
+}
+
+#notice ul {
+  list-style: disc;
+}
+
+#notice ul li {
+  font-size: 16px;
+  line-height: 2.5;
+}
+
+#gallery ul li {
+  display: inline;
+}
+
+/* :checked 가상선택자와 ~ 형제 선택자로 연결*/ 
+#tab1:checked ~ #notice, #tab2:checked ~ #gallery { 
+  display: block;
 }
 
 /* 퀵링크 영역*/
 #links {
   width: 600px;
   height: 100%;
-  background-color:skyblue;
   float: right;
+  margin-top: 10px;
 }
+
+#links ul {
+  padding: 0;
+  overflow: hidden;
+}
+
+#links ul li{
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+#links ul li a {
+  text-decoration: none;
+}
+
+#links ul li p {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #666;
+}
+#links ul li span {
+  display: block;
+  margin: 0 auto; /* 가운데 배치 */
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  line-height: 150px; /* 수직으로 오게끔 */
+}
+
+/* 퀵링크 사진 */
+#quick-icon1 {
+  background-image: url("images/icon-1.jpg");
+}
+#quick-icon2 {
+  background-image: url("images/icon-2.jpg");
+}
+#quick-icon3 {
+  background-image: url("images/icon-3.jpg");
+}
+
 
 /* <!--========================================================
                               FOOTER
@@ -189,5 +280,50 @@ button:focus {
 footer {
   width: 100%;
   height: 100px;
-  background-color: gray;
+  border-top: 1px solid #222;
+}
+
+#bottomMenu {
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+
+#bottomMenu ul {
+  margin-top: 15px;
+  margin-left: -30px;
+}
+
+#bottomMenu ul li {
+  float: left;
+  padding: 5px 20px;
+  border-right: 1px solid #ddd;
+}
+
+#bottomMenu ul li:last-child {
+  border-right: none;
+}
+
+#bottomMenu ul li a {
+  font-size: 15px;
+  color: #666;
+  text-decoration: none;
+}
+
+#sns {
+  position: absolute;
+  right: 0;
+}
+
+#sns ul li {
+  border: none;
+  padding: 5px;
+}
+
+#company {
+  clear: both;
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #aaa;
 }

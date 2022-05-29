@@ -20,8 +20,8 @@ function intervalSlides(n) {
   for (let i=0; i<slides.length; i++) {
     slides[i].style.display = "none";
   }
-  nextSlide(n);
-  setTimeout(intervalSlides, 2000);
+  nextSlide(n); // 다음으로 넘긴다
+  setTimeout(intervalSlides, 2000); // 2초뒤에 함수 실행
 }
 intervalSlides(current);
 
