@@ -110,7 +110,7 @@ ul {
     =========================================================--> */
 /* 슬라이드쇼 영역*/
 #slideShow {
-  width: 100%;
+  width: 1200px;
   height: 300px;
   overflow: hidden; /* 영역 넘치면 감춤 */
   clear: both; /* 플로팅 해제 */
@@ -119,24 +119,24 @@ ul {
 
 #slides {
   position: absolute;
+  width: 6000px;
 }
 
 #slides img {
-  width: 100%;
+  width: 1200px;
   float: left;
 }
 
-#slides button {
+#slideShow button {
   position: absolute;
   height: 100%;
-  top: 0;
   border: none;
   padding: 20px;
   background-color: transparent; /* 투명한 배경 지정 */
   color: #000;
   font-weight: 800;
   font-size: 24px;
-  opacity: 0.5;
+  opacity: 0.5
 }
 
 #prev {
