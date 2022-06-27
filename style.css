@@ -65,7 +65,7 @@ ul {
   padding: 18px 60px;
 }
 
-#topMenu > li > a:hover{
+#topMenu > li > a:hover {
   color: rgb(241, 138, 138);
 }
 
@@ -109,24 +109,28 @@ ul {
                               CONTENT
     =========================================================--> */
 /* 슬라이드쇼 영역*/
+.animated {
+  transition: 0.5s ease-out;
+}
+
 #slideShow {
-  width: 100%;
+  width: 1200px;
   height: 300px;
   overflow: hidden; /* 영역 넘치면 감춤 */
-  clear: both; /* 플로팅 해제 */
   position: relative;
 }
 
 #slides {
+  width: 10800px;
   position: absolute;
 }
 
 #slides img {
-  width: 100%;
+  width: 1200px;
   float: left;
 }
 
-#slides button {
+button {
   position: absolute;
   height: 100%;
   top: 0;
@@ -147,6 +151,30 @@ ul {
   right: 0;
 }
 
+/* .fade-in {
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+/* .fade-out {
+  animation: fade-out 2s;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} */
 button:hover {
   background-color: #222;
   color: #fff;
@@ -199,7 +227,7 @@ button:focus {
 
 .tabContent {
   display: none;
-  padding: 20px 0 0;  
+  padding: 20px 0 0;
   border-top: 1px solid #ddd;
 }
 
@@ -216,8 +244,9 @@ button:focus {
   display: inline;
 }
 
-/* :checked 가상선택자와 ~ 형제 선택자로 연결*/ 
-#tab1:checked ~ #notice, #tab2:checked ~ #gallery { 
+/* :checked 가상선택자와 ~ 형제 선택자로 연결*/
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery {
   display: block;
 }
 
@@ -234,7 +263,7 @@ button:focus {
   overflow: hidden;
 }
 
-#links ul li{
+#links ul li {
   float: left;
   width: 33%;
   text-align: center;
@@ -270,7 +299,6 @@ button:focus {
 #quick-icon3 {
   background-image: url("images/icon-3.jpg");
 }
-
 
 /* <!--========================================================
                               FOOTER
