@@ -123,6 +123,7 @@ ul {
 #slides {
   width: 10800px;
   position: absolute;
+  width: 6000px;
 }
 
 #slides img {
@@ -130,17 +131,20 @@ ul {
   float: left;
 }
 
+<<<<<<< HEAD
 button {
+=======
+#slideShow button {
+>>>>>>> 9a67b9a6b9cdc8e26eb9cf4637e314df0f8eadce
   position: absolute;
   height: 100%;
-  top: 0;
   border: none;
   padding: 20px;
   background-color: transparent; /* 투명한 배경 지정 */
   color: #000;
   font-weight: 800;
   font-size: 24px;
-  opacity: 0.5;
+  opacity: 0.5
 }
 
 #prev {
